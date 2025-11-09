@@ -1,6 +1,10 @@
-#include<iostream>
+#include<iostream> // 导入输入输出数据流
 #include<string>
-using namespace std;
+
+// #include<bits/stdc++.h>
+// 上面两行还可以用万能头进行替换，优点是不需要记忆各个功能需要的库的名称，但是缺点是不是C++的标准头文件、编译速度慢
+
+using namespace std; // 使用std的命名空间（不使用也可以，就是下面得用std::cout、std::cin，比较麻烦
 void bonjour(){
     cout<<"输入您的名字"; // 输入
     string name; // 定义变量类型
