@@ -23,7 +23,7 @@ int main()
     // const 类型 *ptr ：指针指向的值不能变
     // 类型 const *ptr ：和上面一样都是值不能变
 
-    // 类型 * const ptr ：类型紧接* const - ptr指针为常量不能变
+    // 类型 * const ptr ：const紧接ptr - 指针为常量不能变
 
     double d1 = 36;
     const double d2 = 36;
@@ -39,12 +39,12 @@ int main()
     // pt6 = &d1; // 上面定义了不可变指针
     *pt6 = 2.78;
     // double *const pt6b = &d2; // 注意 pt6b 是指针不可变，但是 d2 是值不可变
-    const double *const pt6b = &d2; // 除非对值也设为常量（只能更严格指向更宽松的）
+    const double *const pt6b = &d2; // 自身更严格的可以指向（双const可指1const，1const可以指0const，但是1对1的时候就需要判断是否是同一个const）
     const double *const pt7 = &d1;
     // pt7 = &d1; // pt7的值和指针都不可变
     // *pt7 = 2.78;
     double const *pt8 = &d1; // 注意不是类型紧接，所以是值不能变
-    pt8 = &d2;               // 指向 const double 的可以指向 const 的，也能指向更宽松的不 const 的
+    pt8 = &d2;               // 都是值const
     pt8 = &d1;
     // *pt8 = 3.14;          // 值不能变
 
