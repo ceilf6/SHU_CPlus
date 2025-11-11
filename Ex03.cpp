@@ -3,7 +3,7 @@
 首先按照题目的要求创建项目并进行编译会报错无法找到bonjour这个文件 error: use of undeclared identifier 'function'
 因为从主main.cpp入口进入后直接运行了bonjour但是并没有引入这个文件的声明
 
-改正方案有两种:（可以看Ex3文件夹）
+改正方案有两种:（可以看Ex03文件夹）
 - 1.直接在main.cpp上面声明 void function(); 即可
 - 2.通过自定义头文件 decFunction.h 中统一进行声明管理，然后在 main.cpp 中进行导入即可
     （有点像一个文件夹中通过多个小文件去实现一个个功能函数，然后设置一个 index 去统一进行导出管理）
