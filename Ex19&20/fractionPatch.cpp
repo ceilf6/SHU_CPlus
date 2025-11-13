@@ -39,7 +39,7 @@ namespace MATH
         return f;
     }
 
-    // 后缀版本：先返回旧值，再递增
+    // 后缀版本：先返回旧值，再递增（由下面可以看出需要拷贝构造并析构临时对象，过慢，所以实际还是推荐前缀++）
     Fraction operator++(Fraction &f, int)
     {
         // 保存当前值
