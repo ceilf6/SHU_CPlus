@@ -22,10 +22,9 @@ namespace MATH // namespace 不是全局生效所以如果空间分散在多处�
     }
 
     // ~加类名：析构函数，当对象离开作用域时或者 delete 时自动调用
-    // 析构函数用于清理资源，不释放对象本体内存，delete才是释放对象并且顺便调用析构
     Fraction::~Fraction()
     {
-        // Fraction 类本身没有 new 内存，所以不需要操作，这里只是用作展示
+        // Fraction 类没有我在 Ex19 中提到的数组、文件、互斥锁等，所以 Fraction 类的析构函数只用于展示
         std::cout << "- 析构 Fraction 对象: " << this << " => "
                   << numerateur_ << "/" << denominateur_ << std::endl;
     }
@@ -67,7 +66,7 @@ namespace MATH // namespace 不是全局生效所以如果空间分散在多处�
                 b -= a;
         }
         */
-        // 辗转相减更快
+        // 辗转取余法更快
         while (b != 0)
         {
             int temp = b;

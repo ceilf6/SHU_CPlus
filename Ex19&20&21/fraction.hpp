@@ -18,8 +18,6 @@ namespace MATH
         Fraction(int n = 0, int d = 1); // 默认值构造
         Fraction(const Fraction &f);    // 拷贝构造
 
-        // ~加类名：析构函数，
-        // 当栈内存上的对象离开作用域时或者 delete 时，意味着生命周期结束，会自动调用
         ~Fraction();
 
         // 私有属性getter函数
